@@ -13,7 +13,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import com.itaren.frame.lisenter.WeatherLisenter;
 import com.itaren.util.Constants;
+import com.itaren.util.Resource;
 
 public class MainFrame extends JFrame{
 	public static void main(String[] args) {
@@ -26,6 +28,7 @@ public class MainFrame extends JFrame{
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);//禁用最大化按钮
+		this.setIconImage(Resource.IMAGE_ICON);
 		
 //		设置全屏1
 //		this.getGraphicsConfiguration().getDevice().setFullScreenWindow(this);
@@ -46,20 +49,26 @@ public class MainFrame extends JFrame{
 	private void addLisenters() {
 		
 	}
-
 	private void addComponents() {
 		 setLayout(new GridLayout(0,6));
 		 
 		 
 		 List<JButton> buttons = new ArrayList<>();
-		 JButton jbtn1 = new JButton("Coding Button");
-		 jbtn1.addActionListener(new ActionListener() {
+		 JButton jbtn1 = new JButton("今日天气");
+		 jbtn1.addActionListener(new WeatherLisenter());
+		 buttons.add(jbtn1);	
+		 
+		 //第二个按钮
+		 JButton jbtn2 = new JButton("CMD命令");
+		 jbtn2.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(getParent(), "click "+jbtn1.getText());
+				
 			}
 		});
-		 buttons.add(jbtn1);	
+		 buttons.add(jbtn2);
+		 
 		 
 		 for(int i=0;i<25;i++) {
 			 JButton jbtn = new JButton("Coding Button"+i);

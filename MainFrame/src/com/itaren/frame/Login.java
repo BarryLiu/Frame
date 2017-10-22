@@ -3,6 +3,7 @@ package com.itaren.frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,6 +12,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import com.itaren.util.Constants;
+import com.itaren.util.Resource;
 
 /**
  * 绝对布局窗体界面
@@ -42,6 +44,8 @@ public class Login extends JFrame {
 
 	private Login() {
 		this.setTitle(Constants.TITLE + "简单登录界面");
+		ImageIcon icon=new ImageIcon("icon.jpg");
+		this.setIconImage(Resource.IMAGE_ICON);
 		this.setVisible(true);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
