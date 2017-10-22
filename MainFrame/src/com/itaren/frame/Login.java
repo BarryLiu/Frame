@@ -21,7 +21,6 @@ import com.itaren.util.Resource;
  *
  */
 public class Login extends JFrame {
-	// private JPanel this = new JPanel();
 
 	private JTextField userTf = new JTextField("admin");
 	private JPasswordField pwdPf = new JPasswordField("123");
@@ -44,11 +43,10 @@ public class Login extends JFrame {
 
 	private Login() {
 		this.setTitle(Constants.TITLE + "简单登录界面");
-		ImageIcon icon=new ImageIcon("icon.jpg");
-		this.setIconImage(Resource.IMAGE_ICON);
-		this.setVisible(true);
+		this.setIconImage(Resource.IMAGE_ICON);//设置头标
+		this.setVisible(true);//设置可见
 
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//关闭退出
 
 		this.setResizable(false);// 禁用最大化按钮
 

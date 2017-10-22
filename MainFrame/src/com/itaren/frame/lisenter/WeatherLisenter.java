@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 
 import com.itaren.data.juhe.JuheWeather;
 import com.itaren.data.juhe.weather.JsonRootBean;
-import com.itaren.frame.WeatherFrame;
+import com.itaren.frame.childs.WeatherFrame;
 import com.itaren.util.Constants;
 
 import net.sf.json.JSONObject;

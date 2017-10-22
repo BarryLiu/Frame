@@ -1,18 +1,24 @@
 package com.itaren.test;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 
 public class Test {
-	public static void main(String[] args)   {
+	public static void main(String[] args) throws IOException   {
 		
 		System.out.println("Test .... ");
 		
-		//Desktop.getDesktop().open(new File("C:\\Users\\Barry\\Desktop\\abc.txt"));
-		//executeCmd("C:\\Users\\Barry\\Desktop\\abc.txt");
+//		Desktop.getDesktop().open(new File("C:\\Users\\Barry\\Desktop\\abc.txt"));
+		String executeCmd = executeCmd(" git status");
+		System.out.println(executeCmd);
 		
+//		executeNircmd();
+	}
+	private static void executeNircmd() {
 		Process process;
 		try {
 			//process = Runtime.getRuntime().exec("G:/softs/nircmd/nircmd.exe /c elevate   net start Itaren_8001");//����ϵͳ����

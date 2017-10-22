@@ -1,11 +1,12 @@
-package com.itaren.frame;
+package com.itaren.frame.childs;
 
 import javax.swing.JFrame;
 
 import com.itaren.data.juhe.weather.JsonRootBean;
+import com.itaren.frame.BaseFrame;
 import com.itaren.util.Resource;
 
-public class WeatherFrame extends JFrame{
+public class WeatherFrame extends BaseFrame{
 	
 	
 	public WeatherFrame(JsonRootBean jrb) {
@@ -16,15 +17,17 @@ public class WeatherFrame extends JFrame{
 		this.setLocationRelativeTo(null);
 		this.setIconImage(Resource.IMAGE_ICON);
 		
-		addComponents();
-		addLisenters();
 	}
 
-	private void addLisenters() {
+	@Override
+	protected void addComponents() {
 		
 	}
 
-	private void addComponents() {
+	@Override
+	protected void addLisenters() {
 		
 	}
+
+	
 }

@@ -1,5 +1,10 @@
 package com.itaren.util;
 
+/**
+ * 一般配置参数资源
+ * @author Barry
+ *
+ */
 public class Constants {
 	//other keys 
 	public static final String JUHE_WEATHER_KEY="JUHE_WEATHER_KEY";
