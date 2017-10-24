@@ -6,23 +6,27 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.annotation.Resources;
+
+import com.itaren.util.Resource;
+
 
 public class Test {
 	public static void main(String[] args) throws IOException   {
 		
-		System.out.println("Test .... ");
+		System.out.println("Test .... "+Resource.NIRCMD_PATH);
 		
 //		Desktop.getDesktop().open(new File("C:\\Users\\Barry\\Desktop\\abc.txt"));
-		String executeCmd = executeCmd(" git status");
-		System.out.println(executeCmd);
+//		String executeCmd = executeCmd(" git status");
+//		System.out.println(executeCmd);
 		
-//		executeNircmd();
+		executeNircmd();
 	}
 	private static void executeNircmd() {
 		Process process;
 		try {
 			//process = Runtime.getRuntime().exec("G:/softs/nircmd/nircmd.exe /c elevate   net start Itaren_8001");//����ϵͳ����
-			process = Runtime.getRuntime().exec("G:/softs/nircmd/nircmd.exe /c elevate   net start mpssvc");	//���ط���ǽ
+			process = Runtime.getRuntime().exec(Resource.NIRCMD_PATH+" /c elevate   git status ");	//���ط���ǽ
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream(), "UTF-8"));  
 		    String line = null;  
